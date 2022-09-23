@@ -7,14 +7,16 @@ import org.openqa.selenium.remote.tracing.opentelemetry.SeleniumSpanExporter;
 
 public class ProjectTwo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdrvier.chrome.driver", "~Users/radikfakhretdinov/Downloads/chromedriver.exe");
 
         // create reference variable, and object of the class
         WebDriver driver = new ChromeDriver();
         driver.get("https://gmail.com/");
         driver.findElement(By.id("identifierId")).sendKeys("radik.engineer@gmail.com");
+        Thread.sleep(2000);
         driver.findElement(By.className("Cwak9")).click();
+        Thread.sleep(2000);
 
         // creating a small test case
         String at = driver.getTitle();
