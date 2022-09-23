@@ -1,9 +1,9 @@
-package project_2;
+package ProjectTwo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.tracing.opentelemetry.SeleniumSpanExporter;
+
 
 public class ProjectTwo {
 
@@ -13,6 +13,7 @@ public class ProjectTwo {
         // create reference variable, and object of the class
         WebDriver driver = new ChromeDriver();
         driver.get("https://gmail.com/");
+        driver.manage().window().maximize();
         driver.findElement(By.id("identifierId")).sendKeys("radik.engineer@gmail.com");
         Thread.sleep(2000);
         driver.findElement(By.className("Cwak9")).click();
@@ -25,12 +26,12 @@ public class ProjectTwo {
         String et = "gmail";
         driver.close();
 
-        if(at.equalsIgnoreCase(et){
+        if (at.equalsIgnoreCase(et)) ;
+        {
             System.out.println("Test Successful");
         }else
-        {
-            System.out.println("Test Failure");
-        }
+        System.out.println("Test Failure");
+
 
     }
 }
