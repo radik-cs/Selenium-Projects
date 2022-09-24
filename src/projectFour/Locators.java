@@ -30,6 +30,11 @@ public class Locators {
        // Thread.sleep(2000);
         //driver.findElement(By.name("btnK")).click();
 
+        // CSS Selector
+        driver.findElement(By.cssSelector("#login-username")).sendKeys("selenium@yahoo.com/");
+        Thread.sleep(5000);
+        driver.findElement(By.cssSelector("#login-signin")).click();
+
 
 
 
