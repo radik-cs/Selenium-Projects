@@ -23,17 +23,23 @@ public class Locators {
         //driver.get("https://google.com/");
         //driver.findElement(By.name("q")).sendKeys("Selenium");
 
-        driver.get("https://login.yahoo.com/");
-        driver.findElement(By.linkText("Difficulty signing in?")).click();
+        // driver.get("https://login.yahoo.com/");
+        //driver.findElement(By.linkText("Difficulty signing in?")).click();
 
         // will wait for 2 seconds
        // Thread.sleep(2000);
         //driver.findElement(By.name("btnK")).click();
 
         // CSS Selector
-        driver.findElement(By.cssSelector("#login-username")).sendKeys("selenium@yahoo.com/");
-        Thread.sleep(5000);
-        driver.findElement(By.cssSelector("#login-signin")).click();
+       // driver.findElement(By.cssSelector("#login-username")).sendKeys("selenium@yahoo.com/");
+        //Thread.sleep(5000);
+       // driver.findElement(By.cssSelector("#login-signin")).click();
+
+        // Partial Link Text
+        driver.get("https://login.yahoo.com/");
+        driver.findElement(By.partialLinkText("Difficulty")).click();
+        Thread.sleep(2000);
+        
 
 
 
