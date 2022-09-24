@@ -36,10 +36,15 @@ public class Locators {
        // driver.findElement(By.cssSelector("#login-signin")).click();
 
         // Partial Link Text
+       // driver.get("https://login.yahoo.com/");
+        //driver.findElement(By.partialLinkText("Difficulty")).click();
+        //Thread.sleep(2000);
+
+        // XPath
         driver.get("https://login.yahoo.com/");
-        driver.findElement(By.partialLinkText("Difficulty")).click();
-        Thread.sleep(2000);
-        
+        driver.findElement(By.xpath("//input[@id='login-username']")).sendKeys("selenium@yahoo.com/");
+        Thread.sleep(7000);
+        driver.findElement(By.xpath("//input[@id='login-signin']")).click();
 
 
 
