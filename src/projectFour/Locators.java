@@ -16,9 +16,18 @@ public class Locators {
         driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-        driver.get("https://accounts.gmail.com/");
-        WebElement username = driver.findElement(By.id("identifierId"));
-        username.sendKeys("selenium@gmail.com");
+        //driver.get("https://accounts.gmail.com/");
+        //WebElement username = driver.findElement(By.id("identifierId"));
+        //username.sendKeys("selenium@gmail.com");
+        driver.get("https://google.com/");
+        driver.findElement(By.name("q")).sendKeys("Selenium");
+
+        // will wait for 2 seconds
+        Thread.sleep(2000);
+        driver.findElement(By.name("btnK")).click();
+
+
+
 
 
     }
