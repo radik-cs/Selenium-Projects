@@ -19,12 +19,16 @@ public class Locators {
         //driver.get("https://accounts.gmail.com/");
         //WebElement username = driver.findElement(By.id("identifierId"));
         //username.sendKeys("selenium@gmail.com");
-        driver.get("https://google.com/");
-        driver.findElement(By.name("q")).sendKeys("Selenium");
+
+        //driver.get("https://google.com/");
+        //driver.findElement(By.name("q")).sendKeys("Selenium");
+
+        driver.get("https://login.yahoo.com/");
+        driver.findElement(By.linkText("Difficulty signing in?")).click();
 
         // will wait for 2 seconds
-        Thread.sleep(2000);
-        driver.findElement(By.name("btnK")).click();
+       // Thread.sleep(2000);
+        //driver.findElement(By.name("btnK")).click();
 
 
 
