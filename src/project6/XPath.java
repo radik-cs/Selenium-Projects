@@ -1,6 +1,8 @@
 package project6;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -16,7 +18,11 @@ public class XPath {
 
         driver.get("https://www.ebay.com/");
 
-        
+        // Using Xpath functions (methods)
+        driver.findElement(By.xpath("//input[@id='gc-ac']")).sendKeys("Guitar");
+        WebElement searchIcon = driver.findElement(By.xpath("//input[@id='gh-btn']"));
+
+        searchIcon.click();
 
     }
 }
