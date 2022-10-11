@@ -4,6 +4,10 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.v85.input.Input;
+
+import java.awt.*;
+import java.awt.event.InputEvent;
 
 public class Alerts {
     public static void main(String[] args) throws InterruptedException {
@@ -15,6 +19,7 @@ public class Alerts {
 
         // your file / project with alerts
         driver.get("file://Users/Download/fileName.html");
+        driver.manage().window().maximize();
         Thread.sleep(5000);
 
         driver.findElement(By.id("alert")).click();
@@ -32,8 +37,21 @@ public class Alerts {
         // Pause this execution for a few seconds
         Thread.sleep(4000);
 
+        // clicking the "OK" button on Alert window
+        alert.accept();
 
+        // Pop Up button
+        Thread.sleep(5000);
+        driver.findElement(By.id("PopUp")).click();
 
+        // Mouse functions
+        Robot robot = new Robot();
+        robot.mouseMove(400, 5)
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        Thread.sleep(2000);
+        driver.quit();
+        
     }
 }
 
