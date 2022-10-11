@@ -18,11 +18,11 @@ public class Alerts {
         WebDriver driver = new ChromeDriver();
 
         // your file / project with alerts
-        driver.get("file://Users/Download/fileName.html");
+        driver.get("https://www.amazon.com/gp/help/customer/display.html?nodeId=GSU7B24EJZGP9A9Y");
         driver.manage().window().maximize();
         Thread.sleep(5000);
 
-        driver.findElement(By.id("alert")).click();
+        driver.findElement(By.id("a-autoid-0")).click();
         Thread.sleep(3000);
 
         // Create an object To switch to another alert
@@ -37,7 +37,7 @@ public class Alerts {
         // Pause this execution for a few seconds
         Thread.sleep(4000);
 
-        // clicking the "OK" button on Alert window
+        // clicking the "Yes" button on Alert window
         alert.accept();
 
         // Pop Up button
@@ -51,7 +51,7 @@ public class Alerts {
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         Thread.sleep(2000);
         driver.quit();
-        
+
     }
 }
 
