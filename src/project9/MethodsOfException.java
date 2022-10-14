@@ -1,6 +1,7 @@
 package project9;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +15,10 @@ public class MethodsOfException {
         driver.get("https://www.google.com/");
         Thread.sleep(2000);
 
-        // throw method
+       /*
+        # 3
+        throw method
+
         try {
             driver.findElement(By.name("fake")).click();
         }catch (NoSuchElementException e){
@@ -22,11 +26,13 @@ public class MethodsOfException {
             System.out.println("Hello");
 
              throw (e);
+        } */
+
+        try {
+            driver.switchTo().alert().accept();
+    }catch (NoAlertPresentException E){
+            E.printStackTrace();
         }
-
-        System.out.println("Hello");
-
-    }
 
     }
 }
