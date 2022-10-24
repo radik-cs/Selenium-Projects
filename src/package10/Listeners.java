@@ -34,6 +34,7 @@ System.setProperty("webdrveir.chrome.driver", "~Users/radikfakhretdinov/Download
         eventHandler.quit();
 
         // Unregister allows to detach
-        
+        eventHandler.unregister(eCapture);
+        System.out.println("End of Listeners Class");
     }
 }
